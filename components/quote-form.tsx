@@ -61,7 +61,7 @@ function validatePhone(phone: string): string {
 }
 
 const BUDGETS = [
-  { label: "Pergola" },
+  { label: "Pergola / Patio Cover" },
   { label: "Artificial Turf" },
   { label: "Plants" },
   { label: "Decorative Rock" },
