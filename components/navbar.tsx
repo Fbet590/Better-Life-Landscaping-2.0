@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-black shadow-sm">
+      <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="flex items-center justify-between px-4 h-24 max-w-6xl mx-auto">
           <a href="#">
             <Image

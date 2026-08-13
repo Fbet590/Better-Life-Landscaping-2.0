@@ -64,13 +64,16 @@ const BUDGETS = [
   { label: "Pergola" },
   { label: "Artificial Turf" },
   { label: "Plants" },
+  { label: "Decorative Rock" },
+  { label: "Drip Irrigation" },
+  { label: "Travertine" },
 ]
 
 // Steps: 1=Budget, 2=Name, 3=Email, 4=Phone
 const TOTAL_STEPS = 4
 
 type FormData = {
-  budget: string
+  budget: string[]
   name: string
   email: string
   phone: string
@@ -81,14 +84,23 @@ export default function QuoteForm() {
   const [submitted, setSubmitted] = useState(false)
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({})
   const [form, setForm] = useState<FormData>({
-    budget: "",
+    budget: [],
     name: "",
     email: "",
     phone: "",
   })
 
+  const toggleBudget = (label: string) => {
+    setForm((p) => ({
+      ...p,
+      budget: p.budget.includes(label)
+        ? p.budget.filter((b) => b !== label)
+        : [...p.budget, label],
+    }))
+  }
+
   const canContinue = () => {
-    if (step === 1) return !!form.budget
+    if (step === 1) return form.budget.length > 0
     if (step === 2) return form.name.trim().length > 1 && !validateName(form.name)
     if (step === 3) return !validateEmail(form.email)
     if (step === 4) return !validatePhone(form.phone)
@@ -126,7 +138,7 @@ export default function QuoteForm() {
           full_name: form.name,
           email: form.email,
           phone: form.phone,
-          budget: form.budget,
+          budget: form.budget.join(", "),
         }),
       }).catch(() => {/* silent — lead already shown success */})
       setSubmitted(true)
@@ -190,7 +202,7 @@ export default function QuoteForm() {
                 {step === 1 && (
                   <>
                     <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#fefefe" }}>What options would you like for your project?</h2>
-                    <p className="text-sm mt-2" style={{ color: "rgba(245,220,170,0.45)" }}>Select one</p>
+                    <p className="text-sm mt-2" style={{ color: "rgba(245,220,170,0.45)" }}>Select all that apply</p>
                   </>
                 )}
                 {step === 2 && (
@@ -208,12 +220,13 @@ export default function QuoteForm() {
               {step === 1 && (
                 <div className="flex flex-col gap-3">
                   {BUDGETS.map((b) => {
-                    const sel = form.budget === b.label
+                    const sel = form.budget.includes(b.label)
                     return (
                       <button
                         key={b.label}
                         type="button"
-                        onClick={() => setForm((p) => ({ ...p, budget: b.label }))}
+                        onClick={() => toggleBudget(b.label)}
+                        aria-pressed={sel}
                         className="relative flex flex-row items-center justify-between gap-3 px-4 py-4 rounded-xl text-left transition-all"
                         style={{
                           border: `2px solid ${sel ? "#FB9109" : "rgba(245,220,170,0.15)"}`,
@@ -229,7 +242,7 @@ export default function QuoteForm() {
                           </span>
                         </div>
                         <span
-                          className="shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
+                          className="shrink-0 w-5 h-5 rounded-md flex items-center justify-center"
                           style={{
                             border: `2px solid ${sel ? "#FB9109" : "rgba(245,220,170,0.25)"}`,
                             backgroundColor: sel ? "#FB9109" : "transparent",
