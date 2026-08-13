@@ -202,7 +202,7 @@ export default function QuoteForm() {
                 </p>
                 {step === 1 && (
                   <>
-                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f9f9f9" }}>What options would you like for your project?</h2>
+                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f7f7f5" }}>What options would you like for your project?</h2>
                     <p className="text-sm mt-2" style={{ color: "rgba(245,220,170,0.45)" }}>Select all that apply</p>
                   </>
                 )}
