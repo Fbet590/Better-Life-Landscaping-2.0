@@ -61,13 +61,14 @@ function validatePhone(phone: string): string {
 }
 
 const BUDGETS = [
-  { label: "Pergola" },
+  { label: "Pergola / Patio Cover" },
   { label: "Artificial Turf" },
   { label: "Plants" },
   { label: "Decorative Rock" },
   { label: "Drip Irrigation" },
   { label: "Travertine" },
   { label: "Fire Pit" },
+  { label: "Outdoor Lighting" },
 ]
 
 // Steps: 1=Budget, 2=Name, 3=Email, 4=Phone
@@ -202,7 +203,7 @@ export default function QuoteForm() {
                 </p>
                 {step === 1 && (
                   <>
-                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#fefefe" }}>What options would you like for your project?</h2>
+                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f7f7f5" }}>What options would you like for your project?</h2>
                     <p className="text-sm mt-2" style={{ color: "rgba(245,220,170,0.45)" }}>Select all that apply</p>
                   </>
                 )}
@@ -219,7 +220,7 @@ export default function QuoteForm() {
 
               {/* ── Step 1: Budget ── */}
               {step === 1 && (
-                <div className="flex flex-col gap-3">
+                <div className="grid grid-cols-2 gap-3">
                   {BUDGETS.map((b) => {
                     const sel = form.budget.includes(b.label)
                     return (
@@ -228,7 +229,7 @@ export default function QuoteForm() {
                         type="button"
                         onClick={() => toggleBudget(b.label)}
                         aria-pressed={sel}
-                        className="relative flex flex-row items-center justify-between gap-3 px-4 py-4 rounded-xl text-left transition-all"
+                        className="relative flex w-full flex-row items-center justify-between gap-2 px-3 py-3 rounded-xl text-left transition-all"
                         style={{
                           border: `2px solid ${sel ? "#FB9109" : "rgba(245,220,170,0.15)"}`,
                           backgroundColor: sel ? "rgba(251,145,9,0.12)" : "rgba(255,235,200,0.06)",
@@ -236,7 +237,7 @@ export default function QuoteForm() {
                       >
                         <div className="flex flex-col items-start min-w-0">
                           <span
-                            className="text-xl font-bold leading-snug transition-colors"
+                            className="text-lg font-bold leading-snug transition-colors"
                             style={{ color: "#fefefe" }}
                           >
                             {b.label}
