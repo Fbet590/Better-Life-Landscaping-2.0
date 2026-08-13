@@ -8,7 +8,7 @@ import { scrollToEstimate } from "@/lib/scroll-to-estimate"
 declare global { interface Window { fbq?: (...args: unknown[]) => void } }
 
 const WEBHOOK_URL =
-  "https://services.leadconnectorhq.com/hooks/rDrIW6TO5WawA7pvJ58H/webhook-trigger/e17e4a97-66d6-48cb-ae0c-115b84291046"
+  "https://services.leadconnectorhq.com/hooks/rDrIW6TO5WawA7pvJ58H/webhook-trigger/e588b77f-a13e-4d94-a6ad-29d7833a94a4"
 
 // ── Validation helpers ──────────────────────────────────────────────
 
