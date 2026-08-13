@@ -67,6 +67,7 @@ const BUDGETS = [
   { label: "Decorative Rock" },
   { label: "Drip Irrigation" },
   { label: "Travertine" },
+  { label: "Fire Pit" },
 ]
 
 // Steps: 1=Budget, 2=Name, 3=Email, 4=Phone
