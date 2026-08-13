@@ -61,9 +61,9 @@ function validatePhone(phone: string): string {
 }
 
 const BUDGETS = [
-  { label: "$15K ~ $25K", sub: "\"Blank slate & need something, nothing crazy\"" },
-  { label: "$25K ~ $50K", sub: "\"I want more than just turf & pavers\"" },
-  { label: "$50K+", sub: "\"The full 9 yards, everything included please\"" },
+  { label: "Pergola" },
+  { label: "Artificial Turf" },
+  { label: "Plants" },
 ]
 
 // Steps: 1=Budget, 2=Name, 3=Email, 4=Phone
@@ -145,9 +145,9 @@ export default function QuoteForm() {
           className="text-[36px] font-black leading-tight text-gray-900 mb-2"
           style={{ fontFamily: '"Space Grotesk", sans-serif', fontWeight: 900 }}
         >
-          Choose From Our Package Offers!
+          Backyard Makeover Needed? Done. Final Price? $17,500.
         </h2>
-        <p className="text-gray-500 text-lg font-medium">Tell us what you have in mind &amp; we&apos;ll do the rest!</p>
+        <p className="text-gray-500 text-lg font-medium">Not all homes qualify! Let&apos;s find out if yours does!</p>
       </div>
 
       {/* Card — warm dark brown, matches beige landing page palette */}
@@ -189,7 +189,7 @@ export default function QuoteForm() {
                 </p>
                 {step === 1 && (
                   <>
-                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#fefefe" }}>Which Package Did You Like?</h2>
+                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#fefefe" }}>What options would you like for your project?</h2>
                     <p className="text-sm mt-2" style={{ color: "rgba(245,220,170,0.45)" }}>Select one</p>
                   </>
                 )}
@@ -226,12 +226,6 @@ export default function QuoteForm() {
                             style={{ color: "#fefefe" }}
                           >
                             {b.label}
-                          </span>
-                          <span
-                            className="text-xl font-semibold leading-snug mt-1"
-                            style={{ color: "#FB9109" }}
-                          >
-                            {b.sub}
                           </span>
                         </div>
                         <span
