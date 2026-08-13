@@ -145,9 +145,9 @@ export default function QuoteForm() {
           className="text-[36px] font-black leading-tight text-gray-900 mb-2"
           style={{ fontFamily: '"Space Grotesk", sans-serif', fontWeight: 900 }}
         >
-          Choose From Our Package Offers!
+          Backyard Makeover Needed? Done. Final Price? $17,300.
         </h2>
-        <p className="text-gray-500 text-lg font-medium">Tell us what you have in mind &amp; we&apos;ll do the rest!</p>
+        <p className="text-gray-500 text-lg font-medium">Not all homes qualify! Let&apos;s find out if yours does!</p>
       </div>
 
       {/* Card — warm dark brown, matches beige landing page palette */}
