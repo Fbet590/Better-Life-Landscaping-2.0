@@ -159,7 +159,7 @@ export default function QuoteForm() {
           className="text-[36px] font-black leading-tight text-gray-900 mb-2"
           style={{ fontFamily: '"Space Grotesk", sans-serif', fontWeight: 900 }}
         >
-          Backyard Makeover Needed? Done. Final Price? $17,500.
+          Backyard Makeover Needed? Done. Final Price? $20,000.
         </h2>
         <p className="text-gray-500 text-lg font-medium">Not all homes qualify! Let&apos;s find out if yours does!</p>
       </div>
