@@ -49,10 +49,10 @@ export default function RootLayout({
           n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
           t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
           document,'script','https://connect.facebook.net/en_US/fbevents.js');
-          fbq('init','1326783655373643');
+          fbq('init','1914339426035373');
           fbq('track','PageView');
         `}} />
-        <noscript dangerouslySetInnerHTML={{ __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1326783655373643&ev=PageView&noscript=1" />` }} />
+        <noscript dangerouslySetInnerHTML={{ __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1914339426035373&ev=PageView&noscript=1" />` }} />
       </head>
       <body className="antialiased font-sans">
         {children}
