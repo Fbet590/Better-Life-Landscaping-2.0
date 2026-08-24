@@ -18,10 +18,11 @@ export default function HeroSection() {
 
       <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[46px] pt-[158px]">
         <h1
-          className="text-white font-extrabold leading-tight text-[48px]"
+          className="text-white leading-tight"
           style={{ fontFamily: '"Outfit", sans-serif' }}
         >
-          Your New Backyard. Design. Install. Done.
+          <span className="block font-extrabold text-[48px]">Your New Backyard.</span>
+          <span className="block font-normal text-[28px] text-white/85 mt-1">Design. Install. Done.</span>
         </h1>
 
         <a href="#estimate" onClick={scrollToEstimate} className="flex flex-col items-center gap-1 text-white/90 text-xl font-medium hover:text-white transition-colors">
