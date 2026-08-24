@@ -1,7 +1,6 @@
 "use client"
 
 import Image from "next/image"
-import AnimatedHeadline from "./animated-headline"
 import { scrollToEstimate } from "@/lib/scroll-to-estimate"
 
 export default function HeroSection() {
@@ -18,7 +17,12 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[46px] pt-[158px]">
-        <AnimatedHeadline />
+        <h1
+          className="text-white font-extrabold leading-tight text-[48px]"
+          style={{ fontFamily: '"Outfit", sans-serif' }}
+        >
+          Your New Backyard. Design. Install. Done.
+        </h1>
 
         <a href="#estimate" onClick={scrollToEstimate} className="flex flex-col items-center gap-1 text-white/90 text-xl font-medium hover:text-white transition-colors">
           SCROLL
