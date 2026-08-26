@@ -219,7 +219,7 @@ export default function QuoteForm() {
                 )}
                 {step === 2 && (
                   <>
-                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f7f7f5" }}>{"What's your budget for this project?"}</h2>
+                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f7f7f5" }}>{"What budget do you have in mind for this project?"}</h2>
                     <p className="text-sm mt-2" style={{ color: "rgba(245,220,170,0.45)" }}>Select one</p>
                   </>
                 )}
