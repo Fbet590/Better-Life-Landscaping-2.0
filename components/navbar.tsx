@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import { scrollToEstimate } from "@/lib/scroll-to-estimate"
 
 const NAV_LINKS = [
@@ -18,16 +17,8 @@ export default function Navbar() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="flex items-center justify-between px-4 h-24 max-w-6xl mx-auto">
-          <a href="#">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20%20%281%29-TpbmzwSc7TC7OuxsGGsB0vXyIs1IHc.png"
-              alt="Better Life Landscaping & Design Co."
-              width={260}
-              height={96}
-              className="h-24"
-              style={{ width: "auto" }}
-              priority
-            />
+          <a href="#" aria-label="Better Life Landscaping & Design Co.">
+            <span className="sr-only">Better Life Landscaping & Design Co.</span>
           </a>
 
           {/* Desktop nav */}
