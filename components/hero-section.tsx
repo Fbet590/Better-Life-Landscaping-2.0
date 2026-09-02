@@ -7,8 +7,8 @@ export default function HeroSection() {
   return (
     <section className="relative flex justify-center pb-16" style={{ minHeight: "100dvh" }}>
       <Image
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_l7xel8l7xel8l7xe.png-NkJOymxjp3FPkfaW6xLSLZGoMUXzPW.jpeg"
-        alt="Beautiful Arizona backyard with artificial turf, travertine pavers and pergola"
+        src="/images/hero-backyard-sunset.jpg"
+        alt="Beautiful Arizona backyard at sunset with artificial turf, travertine pavers and pergola"
         fill
         className="object-cover object-center"
         priority
