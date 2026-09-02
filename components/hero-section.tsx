@@ -23,7 +23,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[189px] pt-[114px]">
+      <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[210px] pt-[114px]">
         <h1
           className="text-white leading-tight"
           style={{ fontFamily: '"Outfit", sans-serif' }}
