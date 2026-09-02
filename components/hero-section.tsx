@@ -23,13 +23,12 @@ export default function HeroSection() {
         }}
       />
 
-      {/* Warm sunset-orange glow concentrated near the middle of the image */}
+      {/* Warm sunset-orange glow added into the sky, centered near the middle of the image */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(ellipse 70% 45% at 50% 42%, rgba(251,145,9,0.5) 0%, rgba(230,110,25,0.32) 40%, rgba(180,80,25,0.12) 65%, rgba(0,0,0,0) 85%)",
-          mixBlendMode: "hard-light",
+            "radial-gradient(ellipse 65% 30% at 50% 22%, rgba(251,145,9,0.55) 0%, rgba(240,120,30,0.35) 45%, rgba(220,100,30,0.15) 70%, rgba(0,0,0,0) 90%)",
         }}
       />
 
