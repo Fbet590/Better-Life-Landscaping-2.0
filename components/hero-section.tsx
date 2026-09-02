@@ -7,8 +7,8 @@ export default function HeroSection() {
   return (
     <section className="relative flex justify-center pb-16" style={{ minHeight: "100dvh" }}>
       <Image
-        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_l7xel8l7xel8l7xe.png-NkJOymxjp3FPkfaW6xLSLZGoMUXzPW.jpeg"
-        alt="Beautiful Arizona backyard with artificial turf, travertine pavers and pergola"
+        src="/hero-backyard-sunset.png"
+        alt="Beautiful Arizona backyard at sunset with artificial turf, travertine pavers and pergola"
         fill
         className="object-cover object-center"
         priority
@@ -18,20 +18,10 @@ export default function HeroSection() {
           className="text-white leading-tight"
           style={{ fontFamily: '"Outfit", sans-serif' }}
         >
-          <span
-            className="block font-extrabold text-[48px]"
-            style={{ color: "#ffffff", textShadow: "0 2px 4px rgba(0,0,0,0.55), 0 8px 24px rgba(0,0,0,0.4)" }}
-          >
-            Your{" "}
-            <span style={{ color: "#FB9109", fontSize: "86px", textShadow: "0 2px 4px rgba(0,0,0,0.55), 0 8px 24px rgba(0,0,0,0.4)" }}>
-              New
-            </span>{" "}
-            Backyard.
+          <span className="block font-extrabold text-[48px]" style={{ color: "#ffffff" }}>
+            Your <span style={{ color: "#FB9109", fontSize: "86px" }}>New</span> Backyard.
           </span>
-          <span
-            className="block font-normal text-[28px] mt-1"
-            style={{ color: "#ffffff", textShadow: "0 2px 4px rgba(0,0,0,0.55), 0 8px 24px rgba(0,0,0,0.4)" }}
-          >
+          <span className="block font-normal text-[28px] mt-1" style={{ color: "#ffffff" }}>
             Design. Install. Done.
           </span>
         </h1>
