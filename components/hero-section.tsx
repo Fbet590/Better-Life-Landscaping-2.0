@@ -6,13 +6,36 @@ import { scrollToEstimate } from "@/lib/scroll-to-estimate"
 export default function HeroSection() {
   return (
     <section className="relative flex justify-center pb-16" style={{ minHeight: "100dvh" }}>
+      {/* Blurred backdrop fills the screen edge-to-edge without cropping the main photo */}
       <Image
         src="/images/hero-backyard-new.png"
-        alt="Beautiful Arizona backyard at sunset with artificial turf, travertine pavers and pergola"
+        alt=""
         fill
-        className="object-cover object-center"
+        aria-hidden="true"
+        className="object-cover object-center scale-125 blur-2xl opacity-90"
         priority
       />
+
+      {/* Full, un-cropped photo, sized to its true aspect ratio so nothing is zoomed in.
+          Its own top/bottom edges fade into the blurred backdrop below. */}
+      <div
+        className="absolute left-0 right-0 top-1/2 w-full -translate-y-1/2"
+        style={{
+          aspectRatio: "1535 / 1024",
+          maskImage:
+            "linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%)",
+          WebkitMaskImage:
+            "linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%)",
+        }}
+      >
+        <Image
+          src="/images/hero-backyard-new.png"
+          alt="Beautiful Arizona backyard at sunset with artificial turf, travertine pavers and pergola"
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </div>
 
       {/* Sunset-tinted sky darkening for text contrast */}
       <div
