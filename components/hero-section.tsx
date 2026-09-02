@@ -23,6 +23,16 @@ export default function HeroSection() {
         }}
       />
 
+      {/* Warm sunset-orange glow concentrated near the middle of the image */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 45% at 50% 42%, rgba(251,145,9,0.5) 0%, rgba(230,110,25,0.32) 40%, rgba(180,80,25,0.12) 65%, rgba(0,0,0,0) 85%)",
+          mixBlendMode: "hard-light",
+        }}
+      />
+
       <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[210px] pt-[114px]">
         <h1
           className="text-white leading-tight"
