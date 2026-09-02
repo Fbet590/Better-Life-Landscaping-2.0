@@ -19,7 +19,7 @@ export default function HeroSection() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(to bottom, rgba(40,20,15,0.55) 0%, rgba(90,45,25,0.4) 22%, rgba(120,60,30,0.18) 42%, rgba(0,0,0,0) 60%)",
+            "linear-gradient(to bottom, rgba(30,15,10,0.72) 0%, rgba(75,38,20,0.55) 22%, rgba(105,52,25,0.28) 42%, rgba(0,0,0,0) 60%)",
         }}
       />
 
@@ -29,7 +29,18 @@ export default function HeroSection() {
           style={{ fontFamily: '"Outfit", sans-serif' }}
         >
           <span className="block font-extrabold text-[48px]" style={{ color: "#ffffff" }}>
-            Your <span style={{ color: "#FB9109", fontSize: "86px" }}>New</span> Backyard.
+            Your{" "}
+            <span
+              style={{
+                fontSize: "86px",
+                color: "#ffffff",
+                WebkitTextStroke: "2px #FB9109",
+                paintOrder: "stroke fill",
+              }}
+            >
+              New
+            </span>{" "}
+            Backyard.
           </span>
           <span className="block font-normal text-[28px] mt-1" style={{ color: "#ffffff" }}>
             Design. Install. Done.
