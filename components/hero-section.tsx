@@ -7,12 +7,22 @@ export default function HeroSection() {
   return (
     <section className="relative flex justify-center pb-16" style={{ minHeight: "100dvh" }}>
       <Image
-        src="/hero-backyard-sunset.png"
-        alt="Beautiful Arizona backyard at sunset with artificial turf, travertine pavers and pergola"
+        src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_l7xel8l7xel8l7xe.png-NkJOymxjp3FPkfaW6xLSLZGoMUXzPW.jpeg"
+        alt="Beautiful Arizona backyard with artificial turf, travertine pavers and pergola"
         fill
         className="object-cover object-center"
         priority
       />
+
+      {/* Sunset-tinted sky darkening for text contrast */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(40,20,15,0.55) 0%, rgba(90,45,25,0.4) 22%, rgba(120,60,30,0.18) 42%, rgba(0,0,0,0) 60%)",
+        }}
+      />
+
       <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[189px] pt-[114px]">
         <h1
           className="text-white leading-tight"
@@ -30,7 +40,7 @@ export default function HeroSection() {
           href="#estimate"
           onClick={scrollToEstimate}
           className="flex flex-col items-center gap-1 text-xl font-medium hover:text-white transition-colors"
-          style={{ color: "#ffffff", textShadow: "0 2px 4px rgba(0,0,0,0.55), 0 8px 24px rgba(0,0,0,0.4)" }}
+          style={{ color: "#ffffff" }}
         >
           Get Your Estimate!
           <svg className="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
