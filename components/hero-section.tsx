@@ -14,14 +14,16 @@ export default function HeroSection() {
         priority
       />
       {/* Overlay for text legibility */}
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/25" />
 
       <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[46px] pt-[158px]" style={{ color: "rgba(26, 26, 26, 0.17)" }}>
         <h1
           className="text-white leading-tight"
           style={{ fontFamily: '"Outfit", sans-serif' }}
         >
-          <span className="block font-extrabold text-[48px]">Your New Backyard.</span>
+          <span className="block font-extrabold text-[48px]">
+            Your <span style={{ color: "#FB9109", fontSize: "86px" }}>New</span> Backyard.
+          </span>
           <span className="block font-normal text-[28px] text-white/85 mt-1">Design. Install. Done.</span>
         </h1>
 
