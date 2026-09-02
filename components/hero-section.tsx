@@ -33,7 +33,7 @@ export default function HeroSection() {
             <span
               style={{
                 fontSize: "86px",
-                color: "#06B8FC",
+                color: "#fbfbfb",
                 WebkitTextStroke: "6px #FB9109",
                 paintOrder: "stroke fill",
               }}
