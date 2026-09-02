@@ -208,13 +208,13 @@ export default function QuoteForm() {
                   </>
                 )}
                 {step === 2 && (
-                  <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f5e6cc" }}>{"What's your"}<br />name?</h2>
+                  <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f7f7f5" }}>{"What's your"}<br />name?</h2>
                 )}
                 {step === 3 && (
-                  <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f5e6cc" }}>{"What's your"}<br />email?</h2>
+                  <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f7f7f5" }}>{"What's your"}<br />email?</h2>
                 )}
                 {step === 4 && (
-                  <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f5e6cc" }}>{"What's your"}<br />phone number?</h2>
+                  <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f7f7f5" }}>{"What's your"}<br />phone number?</h2>
                 )}
               </div>
 
@@ -281,7 +281,7 @@ export default function QuoteForm() {
                     style={{
                       borderBottom: `2px solid ${errors.name ? "#f87171" : "rgba(245,220,170,0.2)"}`,
                       borderRadius: 0,
-                      color: "#f5e6cc",
+                      color: "#f7f7f5",
                     }}
                   />
                   {errors.name && <p className="text-red-400 text-xs font-medium mt-1">{errors.name}</p>}
@@ -316,7 +316,7 @@ export default function QuoteForm() {
                     style={{
                       borderBottom: `2px solid ${errors.email ? "#f87171" : "rgba(245,220,170,0.2)"}`,
                       borderRadius: 0,
-                      color: "#f5e6cc",
+                      color: "#f7f7f5",
                     }}
                   />
                   {errors.email && <p className="text-red-400 text-xs font-medium mt-1">{errors.email}</p>}
@@ -348,7 +348,7 @@ export default function QuoteForm() {
                     style={{
                       borderBottom: `2px solid ${errors.phone ? "#f87171" : "rgba(245,220,170,0.2)"}`,
                       borderRadius: 0,
-                      color: "#f5e6cc",
+                      color: "#f7f7f5",
                     }}
                   />
                   {errors.phone && <p className="text-red-400 text-xs font-medium mt-1">{errors.phone}</p>}
