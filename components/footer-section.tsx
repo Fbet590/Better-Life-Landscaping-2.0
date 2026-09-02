@@ -1,4 +1,3 @@
-import Image from "next/image"
 import EstimateCTA from "./estimate-cta"
 
 const AREAS = [
@@ -56,19 +55,7 @@ export default function FooterSection() {
       {/* Footer */}
       <footer className="py-10 px-4" style={{ backgroundColor: "#000000" }}>
         <div className="max-w-2xl mx-auto">
-          <Image
-            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo%20%20%281%29-TpbmzwSc7TC7OuxsGGsB0vXyIs1IHc.png"
-            alt="Better Life Landscaping"
-            width={140}
-            height={52}
-            className="h-12 w-auto mb-5 brightness-0 invert"
-          />
 
-          <div className="border-t border-white/10 pt-6">
-            <p className="text-white/40 text-xs text-center">
-              &copy; {new Date().getFullYear()} Better Life Landscaping LLC. All Rights Reserved.
-            </p>
-          </div>
         </div>
       </footer>
     </>
