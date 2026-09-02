@@ -71,18 +71,11 @@ const BUDGETS = [
   { label: "Outdoor Lighting" },
 ]
 
-const BUDGET_RANGES = [
-  { label: "$9,000 - $15,000" },
-  { label: "$15,000 - $25,000" },
-  { label: "$25,000+" },
-]
-
-// Steps: 1=Options, 2=Budget Range, 3=Name, 4=Email, 5=Phone
-const TOTAL_STEPS = 5
+// Steps: 1=Options, 2=Name, 3=Email, 4=Phone
+const TOTAL_STEPS = 4
 
 type FormData = {
   budget: string[]
-  budgetRange: string
   name: string
   email: string
   phone: string
@@ -94,7 +87,6 @@ export default function QuoteForm() {
   const [errors, setErrors] = useState<Partial<Record<keyof FormData, string>>>({})
   const [form, setForm] = useState<FormData>({
     budget: [],
-    budgetRange: "",
     name: "",
     email: "",
     phone: "",
@@ -111,24 +103,23 @@ export default function QuoteForm() {
 
   const canContinue = () => {
     if (step === 1) return form.budget.length > 0
-    if (step === 2) return form.budgetRange.length > 0
-    if (step === 3) return form.name.trim().length > 1 && !validateName(form.name)
-    if (step === 4) return !validateEmail(form.email)
-    if (step === 5) return !validatePhone(form.phone)
+    if (step === 2) return form.name.trim().length > 1 && !validateName(form.name)
+    if (step === 3) return !validateEmail(form.email)
+    if (step === 4) return !validatePhone(form.phone)
     return false
   }
 
   const handleContinue = async () => {
     // Run validators on text steps before advancing
-    if (step === 3) {
+    if (step === 2) {
       const err = validateName(form.name)
       if (err) { setErrors((e) => ({ ...e, name: err })); return }
     }
-    if (step === 4) {
+    if (step === 3) {
       const err = validateEmail(form.email)
       if (err) { setErrors((e) => ({ ...e, email: err })); return }
     }
-    if (step === 5) {
+    if (step === 4) {
       const err = validatePhone(form.phone)
       if (err) { setErrors((e) => ({ ...e, phone: err })); return }
     }
@@ -150,7 +141,6 @@ export default function QuoteForm() {
           email: form.email,
           phone: form.phone,
           budget: form.budget.join(", "),
-          budget_range: form.budgetRange,
         }),
       }).catch(() => {/* silent — lead already shown success */})
       setSubmitted(true)
@@ -218,18 +208,12 @@ export default function QuoteForm() {
                   </>
                 )}
                 {step === 2 && (
-                  <>
-                    <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f7f7f5" }}>{"What budget do you have in mind for this project?"}</h2>
-                    <p className="text-sm mt-2" style={{ color: "rgba(245,220,170,0.45)" }}>Select one</p>
-                  </>
-                )}
-                {step === 3 && (
                   <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f5e6cc" }}>{"What's your"}<br />name?</h2>
                 )}
-                {step === 4 && (
+                {step === 3 && (
                   <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f5e6cc" }}>{"What's your"}<br />email?</h2>
                 )}
-                {step === 5 && (
+                {step === 4 && (
                   <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f5e6cc" }}>{"What's your"}<br />phone number?</h2>
                 )}
               </div>
@@ -274,43 +258,8 @@ export default function QuoteForm() {
                 </div>
               )}
 
-              {/* ── Step 2: Budget Range ── */}
+              {/* ── Step 2: Name ── */}
               {step === 2 && (
-                <div className="flex flex-col gap-3">
-                  {BUDGET_RANGES.map((b) => {
-                    const sel = form.budgetRange === b.label
-                    return (
-                      <button
-                        key={b.label}
-                        type="button"
-                        onClick={() => setForm((p) => ({ ...p, budgetRange: b.label }))}
-                        aria-pressed={sel}
-                        className="relative flex w-full flex-row items-center justify-between gap-2 px-4 py-4 rounded-xl text-left transition-all"
-                        style={{
-                          border: `2px solid ${sel ? "#FB9109" : "rgba(245,220,170,0.15)"}`,
-                          backgroundColor: sel ? "rgba(251,145,9,0.12)" : "rgba(255,235,200,0.06)",
-                        }}
-                      >
-                        <span className="text-lg font-bold leading-snug" style={{ color: "#fefefe" }}>
-                          {b.label}
-                        </span>
-                        <span
-                          className="shrink-0 w-5 h-5 rounded-full flex items-center justify-center"
-                          style={{
-                            border: `2px solid ${sel ? "#FB9109" : "rgba(245,220,170,0.25)"}`,
-                            backgroundColor: sel ? "#FB9109" : "transparent",
-                          }}
-                        >
-                          {sel && <Check size={11} className="text-white" strokeWidth={3} />}
-                        </span>
-                      </button>
-                    )
-                  })}
-                </div>
-              )}
-
-              {/* ── Step 3: Name ── */}
-              {step === 3 && (
                 <div className="flex flex-col gap-2 mt-2">
                   <label htmlFor="name" className="text-xs font-bold tracking-[0.15em] uppercase" style={{ color: "rgba(245,220,170,0.45)" }}>
                     Full Name
@@ -339,8 +288,8 @@ export default function QuoteForm() {
                 </div>
               )}
 
-              {/* ── Step 4: Email ── */}
-              {step === 4 && (
+              {/* ── Step 3: Email ── */}
+              {step === 3 && (
                 <div className="flex flex-col gap-2 mt-2">
                   <label htmlFor="email" className="text-xs font-bold tracking-[0.15em] uppercase" style={{ color: "rgba(245,220,170,0.45)" }}>
                     Email Address
@@ -374,8 +323,8 @@ export default function QuoteForm() {
                 </div>
               )}
 
-              {/* ── Step 5: Phone ── */}
-              {step === 5 && (
+              {/* ── Step 4: Phone ── */}
+              {step === 4 && (
                 <div className="flex flex-col gap-2 mt-2">
                   <label htmlFor="phone" className="text-xs font-bold tracking-[0.15em] uppercase" style={{ color: "rgba(245,220,170,0.45)" }}>
                     Phone Number
