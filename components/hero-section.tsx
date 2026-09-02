@@ -16,7 +16,7 @@ export default function HeroSection() {
       {/* Overlay for text legibility */}
       <div className="absolute inset-0 bg-black/50" />
 
-      <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[46px] pt-[158px]">
+      <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[46px] pt-[158px]" style={{ color: "rgba(26, 26, 26, 0.17)" }}>
         <h1
           className="text-white leading-tight"
           style={{ fontFamily: '"Outfit", sans-serif' }}
