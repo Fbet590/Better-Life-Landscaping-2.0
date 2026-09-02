@@ -208,7 +208,7 @@ export default function QuoteForm() {
                   </>
                 )}
                 {step === 2 && (
-                  <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f5e6cc" }}>{"What's your"}<br />name?</h2>
+                  <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f4f4f4" }}>{"What's your"}<br />name?</h2>
                 )}
                 {step === 3 && (
                   <h2 className="font-extrabold text-3xl leading-tight" style={{ color: "#f5e6cc" }}>{"What's your"}<br />email?</h2>
