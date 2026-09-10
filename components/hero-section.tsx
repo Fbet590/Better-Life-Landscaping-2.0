@@ -23,7 +23,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[89px] pt-[114px]">
+      <div className="relative z-10 text-center px-5 w-full max-w-md mx-auto flex flex-col items-center gap-[40px] pt-[114px]">
         <h1
           className="text-white leading-tight"
           style={{ fontFamily: '"Outfit", sans-serif' }}
@@ -31,7 +31,7 @@ export default function HeroSection() {
           <span className="block font-extrabold text-[48px]" style={{ color: "#ffffff" }}>
             Transform Your Not-So Pretty Backyard.
           </span>
-          <span className="block font-normal text-[28px] mt-[179px] invisible" style={{ color: "#ffffff" }}>
+          <span className="block font-normal text-[28px] mt-[80px] invisible" style={{ color: "#ffffff" }}>
             Into something
           </span>
           <span
@@ -50,7 +50,7 @@ export default function HeroSection() {
         <a
           href="#estimate"
           onClick={scrollToEstimate}
-          className="flex flex-col items-center gap-1 text-xl font-medium hover:text-white transition-colors"
+          className="flex flex-col items-center gap-1 text-[30px] font-medium hover:text-white transition-colors"
           style={{ color: "#ffffff" }}
         >
           Get Your Estimate!
