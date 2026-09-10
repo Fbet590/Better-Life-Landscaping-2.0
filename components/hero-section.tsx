@@ -35,7 +35,7 @@ export default function HeroSection() {
             Into something
           </span>
           <span
-            className="block font-extrabold mt-0"
+            className="block font-extrabold mt-0 invisible"
             style={{
               fontSize: "86px",
               color: "#fbfbfb",
