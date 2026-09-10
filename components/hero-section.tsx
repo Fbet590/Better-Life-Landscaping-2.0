@@ -42,7 +42,16 @@ export default function HeroSection() {
             </span>
           </span>
           <span className="block font-normal text-[28px] mt-1" style={{ color: "#ffffff" }}>
-            Design. Install. Done.
+            Into something{" "}
+            <span
+              style={{
+                color: "#fbfbfb",
+                WebkitTextStroke: "3px #FB9109",
+                paintOrder: "stroke fill",
+              }}
+            >
+              NEW
+            </span>
           </span>
         </h1>
 
