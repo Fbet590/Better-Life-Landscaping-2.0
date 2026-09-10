@@ -50,7 +50,7 @@ export default function HeroSection() {
         <a
           href="#estimate"
           onClick={scrollToEstimate}
-          className="flex flex-col items-center gap-1 text-xl font-medium hover:text-white transition-colors"
+          className="flex flex-col items-center gap-1 text-[30px] font-medium hover:text-white transition-colors"
           style={{ color: "#ffffff" }}
         >
           Get Your Estimate!
