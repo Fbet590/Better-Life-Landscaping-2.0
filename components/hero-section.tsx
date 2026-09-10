@@ -29,7 +29,7 @@ export default function HeroSection() {
           style={{ fontFamily: '"Outfit", sans-serif' }}
         >
           <span className="block font-extrabold text-[48px]" style={{ color: "#ffffff" }}>
-            Your{" "}
+            Transform Your Ugly backyard.{" "}
             <span
               style={{
                 fontSize: "86px",
@@ -39,8 +39,7 @@ export default function HeroSection() {
               }}
             >
               New
-            </span>{" "}
-            Backyard.
+            </span>
           </span>
           <span className="block font-normal text-[28px] mt-1" style={{ color: "#ffffff" }}>
             Design. Install. Done.
