@@ -29,21 +29,21 @@ export default function HeroSection() {
           style={{ fontFamily: '"Outfit", sans-serif' }}
         >
           <span className="block font-extrabold text-[48px]" style={{ color: "#ffffff" }}>
-            Your{" "}
-            <span
-              style={{
-                fontSize: "86px",
-                color: "#fbfbfb",
-                WebkitTextStroke: "6px #FB9109",
-                paintOrder: "stroke fill",
-              }}
-            >
-              New
-            </span>{" "}
-            Backyard.
+            Transform Your Ugly backyard.
           </span>
-          <span className="block font-normal text-[28px] mt-1" style={{ color: "#ffffff" }}>
-            Design. Install. Done.
+          <span className="block font-normal text-[28px] mt-[19px]" style={{ color: "#ffffff" }}>
+            Into something
+          </span>
+          <span
+            className="block font-extrabold mt-2"
+            style={{
+              fontSize: "86px",
+              color: "#fbfbfb",
+              WebkitTextStroke: "6px #FB9109",
+              paintOrder: "stroke fill",
+            }}
+          >
+            New
           </span>
         </h1>
 
