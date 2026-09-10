@@ -31,7 +31,7 @@ export default function HeroSection() {
           <span className="block font-extrabold text-[48px]" style={{ color: "#ffffff" }}>
             Transform Your Not-So Pretty Backyard.
           </span>
-          <span className="block font-normal text-[28px] mt-[179px]" style={{ color: "#ffffff" }}>
+          <span className="block font-normal text-[28px] mt-[179px] invisible" style={{ color: "#ffffff" }}>
             Into something
           </span>
           <span
